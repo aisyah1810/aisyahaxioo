@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Link ke file CSS terpisah -->
+    <link rel="stylesheet" href="index2.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="Login Image">
+        <h2>Selamat Datang !</h2>
+        <p>Silakan masukkan kredensial Anda untuk login.</p>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="loginBtn">Login</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#loginBtn').click(function() {
+                const username = $('#username').val();
+                const password = $('#password').val();
+
+                if (username === "" || password === "") {
+                    alert("Please fill out both Username and Password.");
+                } else {
+                    alert("Login successful!");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

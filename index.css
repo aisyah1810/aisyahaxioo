@@ -1,0 +1,113 @@
+/* styles.css */
+
+* {
+    font-family: 'Yusei Magic', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #0e0e0e, #1f1f1f);
+    color: #ffffff;
+}
+.wrap {
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+}
+.mycontainer {
+    width: 100%;
+    background-image: url('https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 40px 20px;
+    color: #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.mycontainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+.mycontainer h1, .mycontainer h5 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+h1 {
+    font-size: 1.6em;
+    padding-bottom: 10px;
+}
+h5 {
+    font-size: 1em;
+    opacity: 0.85;
+}
+.form-group {
+    text-align: left;
+    margin: 15px 0;
+    position: relative;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: background 0.3s, transform 0.2s;
+}
+input[type="text"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+}
+label {
+    font-size: 0.9em;
+    color: #cccccc;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    background: #555;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s;
+}
+button:hover::before {
+    left: 100%;
+}
+button:hover {
+    background-color: #555;
+    transform: scale(1.02);
+}
+
